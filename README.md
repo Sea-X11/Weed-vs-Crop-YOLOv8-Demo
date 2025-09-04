@@ -1,4 +1,4 @@
-```markdown
+
 # Weed vs Crop – YOLOv8 Demo
 
 ## 1. Environment Setup
@@ -71,7 +71,7 @@ Deploy via Hugging Face, Streamlit, Flask, etc.
 3. **What You Get**
    - Web UI for image upload  
    - Real-time detection & confidence scores  
-   - Shareable public URL  
-
-   Example: https://huggingface.co/spaces/XXuSea/YOLO_Weed_Detection
-```
+   - Shareable public URL
+  
+ 4. **Example**
+Demo: https://huggingface.co/spaces/XXuSea/YOLO_Weed_Detection
