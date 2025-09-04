@@ -1,21 +1,24 @@
+
 # Weed vs Crop – YOLOv8 Demo
 
-1. environment setup: 
+## 1. Environment Setup
 ```bash
 python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
-```bash
+```
 
-2. train the model:
+## 2. Train the Model
 ```bash
-#gpu
+# GPU
 yolo detect train data=data/data.yaml model=yolov8n.pt epochs=20 imgsz=640 device=0
-# or cpu
-yolo detect train data=data/data.yaml model=yolov8n.pt epochs=20 imgsz=640 device=cpu
-```bash
 
-#my results for example:
+# CPU
+yolo detect train data=data/data.yaml model=yolov8n.pt epochs=20 imgsz=640 device=cpu
+```
+
+### Example Results
+```
 20 epochs completed in 0.022 hours.
 Optimizer stripped from runs/detect/train2/weights/last.pt, 6.2MB
 Optimizer stripped from runs/detect/train2/weights/best.pt, 6.2MB
@@ -30,45 +33,45 @@ Model summary (fused): 72 layers, 3,006,038 parameters, 0 gradients, 8.1 GFLOPs
                   crop         36         36      0.779      0.778      0.848      0.386
 Speed: 0.2ms preprocess, 1.7ms inference, 0.0ms loss, 0.2ms postprocess per image
 Results saved to runs/detect/train2
+```
 
-
-4. run inference and visualize results:
+## 3. Run Inference & Visualize
 ```bash
 python test.py
-```bash
+```
 
-#my results for example:
+### Example Output
 Weed vs Crop_inference_results_03.09.2025.png
 
-5. data source:(roboflow)
-#The direct link to download your zip file is:
-https://universe.roboflow.com/ds/Qf2M6092L9?key=tkLqRm2lhW
+## 4. Data Source (Roboflow)
+- Direct download:  
+  https://universe.roboflow.com/ds/Qf2M6092L9?key=tkLqRm2lhW
 
-#Use this code to download and unzip your dataset via the command line on any *nix machine:
-curl -L "https://universe.roboflow.com/ds/Qf2M6092L9?key=tkLqRm2lhW" > roboflow.zip; unzip roboflow.zip; rm roboflow.zip
-
-6.deployment:
-You can deploy the model using various platforms such as huggingface, streamlit, flask, etc. For example, to deploy on Hugging Face, you can follow these steps:
-## Deployment Steps
-
-### 1. File Structure
-Upload these files to your Hugging Face Space:
+- CLI download:
+```bash
+curl -L "https://universe.roboflow.com/ds/Qf2M6092L9?key=tkLqRm2lhW" > roboflow.zip \
+&& unzip roboflow.zip \
+&& rm roboflow.zip
 ```
-├── app.py
-├── requirements.txt  
-├── README.md
-└── best.pt (your model file)
-```
-### 2. Deploy on Hugging Face
-1. Go to https://huggingface.co/new-space
-2. Choose "Gradio" as SDK
-3. Upload all files above
-4. Your model will be available as a web app
 
-### 3. What You Get
-- Web interface for image upload
-- Automatic detection display
-- Confidence scores
-- Shareable public URL
-eg:
-https://huggingface.co/spaces/XXuSea/YOLO_Weed_Detection
+## 5. Deployment
+Deploy via Hugging Face, Streamlit, Flask, etc.
+
+### Hugging Face (Gradio) Quick Start
+1. **File Structure**
+   ```
+   ├── app.py
+   ├── requirements.txt
+   ├── README.md
+   └── best.pt
+   ```
+2. **Create Space**  
+   Go to https://huggingface.co/new-space → choose **Gradio** → upload files.
+
+3. **What You Get**
+   - Web UI for image upload  
+   - Real-time detection & confidence scores  
+   - Shareable public URL
+  
+ 4. **Example**
+Demo: https://huggingface.co/spaces/XXuSea/YOLO_Weed_Detection
