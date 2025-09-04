@@ -41,7 +41,7 @@ python test.py
 ```
 
 ### Example Output
-Weed vs Crop_inference_results_03.09.2025.png
+![inference results](Weed%20vs%20Crop_inference_results_eg.png)
 
 ## 4. Data Source (Roboflow)
 - Direct download:  
@@ -75,3 +75,5 @@ Deploy via Hugging Face, Streamlit, Flask, etc.
   
  4. **Example**
 Demo: https://huggingface.co/spaces/XXuSea/YOLO_Weed_Detection
+
+![deployment results](deployment_results_eg.png)
