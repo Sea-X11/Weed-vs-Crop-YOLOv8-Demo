@@ -54,7 +54,7 @@ curl -L "https://universe.roboflow.com/ds/Qf2M6092L9?key=tkLqRm2lhW" > roboflow.
 && rm roboflow.zip
 ```
 
-or you can annotate by yourself
+### or, you can annotate/label by yourself
 eg: https://universe.roboflow.com/plant-wymzx/paradoxa-grass-detection-tasj9
 
 ![annotation results](labeled_paradoxa_eg.png)
