@@ -57,7 +57,7 @@ curl -L "https://universe.roboflow.com/ds/Qf2M6092L9?key=tkLqRm2lhW" > roboflow.
 or you can annotate by yourself
 eg: https://universe.roboflow.com/plant-wymzx/paradoxa-grass-detection-tasj9
 
-![annotation results](Weed%20vs%20Crop_labeled_paradoxa_eg.png)
+![annotation results](labeled_paradoxa_eg.png)
 
 
 ## 5. Deployment
